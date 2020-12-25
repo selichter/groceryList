@@ -11,17 +11,17 @@ class GroceryListsView: XCTestCase {
     let app = XCUIApplication()
 
     override func setUpWithError() throws {
-        continueAfterFailure = false
         app.launch()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testGroceryListsTitleIsDisplayed() throws {
+        XCTAssert(app.navigationBars.staticTexts["Grocery Lists"].exists)
     }
 
-    func testGroceryListsViewDisplaysStubText() throws {
-        let stubText = app.staticTexts["stubViewTexts"].label
-        XCTAssertEqual(stubText, "Grocery Lists View")
+    func testHardcodedGroceryListNamesAreDisplayed() {
+        XCTAssert(app.staticTexts["Trader Joe's"].exists)
+        XCTAssert(app.staticTexts["Target"].exists)
+        XCTAssert(app.staticTexts["Aldi"].exists)
     }
 
 }
