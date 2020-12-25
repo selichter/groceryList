@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct GroceryListsView: View {
+    let groceryLists = ["Trader Joe's", "Target", "Aldi"]
     var body: some View {
-        Text("Grocery Lists View")
-            .padding()
-            .accessibility(identifier: "stubViewTexts")
+        List {
+            ForEach(groceryLists, id: \.self) { groceryList in
+                Text(groceryList)
+                .accessibility(identifier: groceryList)
+            }
+        }
+        .navigationTitle("Grocery Lists")
 
     }
 }
