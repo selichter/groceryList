@@ -19,9 +19,21 @@ class GroceryListsView: XCTestCase {
     }
 
     func testHardcodedGroceryListNamesAreDisplayed() {
-        XCTAssert(app.staticTexts["Trader Joe's"].exists)
-        XCTAssert(app.staticTexts["Target"].exists)
-        XCTAssert(app.staticTexts["Aldi"].exists)
+        XCTAssert(app.buttons["Trader Joe's"].exists)
+        XCTAssert(app.buttons["Target"].exists)
+        XCTAssert(app.buttons["Aldi"].exists)
+    }
+
+    func testTappingOnStoreNameNavigatesToThatList() {
+        app.buttons["Aldi"].tap()
+
+        XCTAssert(app.navigationBars.staticTexts["Aldi"].exists)
+        XCTAssert(app.navigationBars.buttons["Grocery Lists"].exists)
+
+        XCTAssert(app.staticTexts["Apples"].exists)
+        XCTAssert(app.staticTexts["Kale"].exists)
+        XCTAssert(app.staticTexts["Grapes"].exists)
+
     }
 
 }
