@@ -12,8 +12,10 @@ struct GroceryListsView: View {
     var body: some View {
         List {
             ForEach(groceryLists, id: \.self) { groceryList in
-                Text(groceryList)
-                .accessibility(identifier: groceryList)
+                NavigationLink(destination: ListDetailView(listName: groceryList)) {
+                    Text(groceryList)
+                        .accessibility(identifier: groceryList)
+                }
             }
         }
         .navigationTitle("Grocery Lists")
