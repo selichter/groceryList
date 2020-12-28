@@ -29,11 +29,26 @@ class GroceryListsView: XCTestCase {
 
         XCTAssert(app.navigationBars.staticTexts["Aldi"].exists)
         XCTAssert(app.navigationBars.buttons["Grocery Lists"].exists)
+        XCTAssert(app.navigationBars.buttons["plus"].exists)
 
         XCTAssert(app.staticTexts["Apples"].exists)
         XCTAssert(app.staticTexts["Kale"].exists)
         XCTAssert(app.staticTexts["Grapes"].exists)
+    }
 
+    func testAddNewItemToGroceryList() {
+        let newItem = "something"
+        app.buttons["Aldi"].tap()
+        app.navigationBars.buttons["plus"].tap()
+
+        let textField = app.textFields.firstMatch
+
+        XCTAssertEqual(textField.placeholderValue, "Item Name")
+
+        textField.tap()
+        textField.typeText(newItem)
+        app.navigationBars.buttons["Add"].tap()
+        XCTAssert(app.staticTexts[newItem].exists)
     }
 
 }
