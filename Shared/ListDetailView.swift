@@ -5,13 +5,19 @@
 import SwiftUI
 
 struct ListDetailView: View {
+    let groceryItems = [GroceryItem(name: "Apples"),
+                        GroceryItem(name: "Kale"),
+                        GroceryItem(name: "Grapes")
+
+    ]
     let listName: String
     var body: some View {
         List {
-            Text("Apples")
-            Text("Kale")
-            Text("Grapes")
-        }.navigationTitle(listName)
+            ForEach(groceryItems) { item in
+                Text(item.name)
+            }
+        }
+        .navigationTitle(listName)
     }
 }
 
