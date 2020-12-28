@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct AddItemView: View {
-//    @Binding var title: String
-    @State private var title = ""
+    @Binding var itemData: GroceryItem.Data
 
     var body: some View {
         List {
-            Section(header: Text("New Grocery Item")) {
-                TextField("Title", text: $title)
+            Section(header:
+                        Text("New Grocery Item")
+                        .accessibility(identifier: "newItemForm")
+            ) {
+                TextField("Item Name", text: $itemData.name)
             }
 
         }
@@ -24,6 +26,7 @@ struct AddItemView: View {
 
 struct AddItemView_Previews: PreviewProvider {
     static var previews: some View {
-        AddItemView()
+        let emptyData = GroceryItem.Data()
+        AddItemView(itemData: .constant(emptyData))
     }
 }

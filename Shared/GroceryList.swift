@@ -10,5 +10,5 @@ import Foundation
 struct GroceryList: Identifiable {
     let id = UUID()
     let storeName: String
-    let items: [GroceryItem]
+    var items: [GroceryItem]
 }
