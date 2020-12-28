@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		1383A13511D5561102FA7689 /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383A8AC4ECAC133F2B46134 /* ListDetailView.swift */; };
 		1383AA8B495A2B0FF30957C2 /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383A8AC4ECAC133F2B46134 /* ListDetailView.swift */; };
+		DF0D84B12597DEEE00EFCC16 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84B02597DEEE00EFCC16 /* AddItemView.swift */; };
+		DF0D84B22597DEEE00EFCC16 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84B02597DEEE00EFCC16 /* AddItemView.swift */; };
 		DF0D84C02599875300EFCC16 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84BF2599875300EFCC16 /* GroceryItem.swift */; };
 		DF0D84C12599875300EFCC16 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84BF2599875300EFCC16 /* GroceryItem.swift */; };
 		DF0D84DB2599896100EFCC16 /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84DA2599896100EFCC16 /* GroceryList.swift */; };
 		DF0D84DC2599896100EFCC16 /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84DA2599896100EFCC16 /* GroceryList.swift */; };
 		DF0D84E2259989CE00EFCC16 /* listData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84E1259989CE00EFCC16 /* listData.swift */; };
 		DF0D84E3259989CE00EFCC16 /* listData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84E1259989CE00EFCC16 /* listData.swift */; };
+		DF0D8511259A484800EFCC16 /* GroceryListUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D8510259A484800EFCC16 /* GroceryListUnitTests.swift */; };
+		DF0D8528259A48C900EFCC16 /* GroceryItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D8527259A48C900EFCC16 /* GroceryItemTests.swift */; };
 		DF6AEC3B25923D24003AFBA8 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC3A25923D24003AFBA8 /* Tests_iOS.swift */; };
 		DF6AEC4625923D25003AFBA8 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC4525923D25003AFBA8 /* Tests_macOS.swift */; };
 		DF6AEC4825923D25003AFBA8 /* GroceryListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC1F25923D21003AFBA8 /* GroceryListApp.swift */; };
@@ -27,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DF0D8513259A484800EFCC16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF6AEC1A25923D21003AFBA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF6AEC2525923D24003AFBA8;
+			remoteInfo = "GroceryList (iOS)";
+		};
 		DF6AEC3725923D24003AFBA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DF6AEC1A25923D21003AFBA8 /* Project object */;
@@ -45,9 +56,14 @@
 
 /* Begin PBXFileReference section */
 		1383A8AC4ECAC133F2B46134 /* ListDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
+		DF0D84B02597DEEE00EFCC16 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		DF0D84BF2599875300EFCC16 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		DF0D84DA2599896100EFCC16 /* GroceryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
 		DF0D84E1259989CE00EFCC16 /* listData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listData.swift; sourceTree = "<group>"; };
+		DF0D850E259A484800EFCC16 /* GroceryListUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryListUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF0D8510259A484800EFCC16 /* GroceryListUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListUnitTests.swift; sourceTree = "<group>"; };
+		DF0D8512259A484800EFCC16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF0D8527259A48C900EFCC16 /* GroceryItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTests.swift; sourceTree = "<group>"; };
 		DF6AEC1F25923D21003AFBA8 /* GroceryListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListApp.swift; sourceTree = "<group>"; };
 		DF6AEC2125923D24003AFBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF6AEC2625923D24003AFBA8 /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +82,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DF0D850B259A484800EFCC16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DF6AEC2325923D24003AFBA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +120,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF0D850F259A484800EFCC16 /* GroceryListUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF0D8510259A484800EFCC16 /* GroceryListUnitTests.swift */,
+				DF0D8512259A484800EFCC16 /* Info.plist */,
+				DF0D8527259A48C900EFCC16 /* GroceryItemTests.swift */,
+			);
+			path = GroceryListUnitTests;
+			sourceTree = "<group>";
+		};
 		DF6AEC1925923D21003AFBA8 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +138,7 @@
 				DF6AEC2F25923D24003AFBA8 /* macOS */,
 				DF6AEC3925923D24003AFBA8 /* Tests iOS */,
 				DF6AEC4425923D25003AFBA8 /* Tests macOS */,
+				DF0D850F259A484800EFCC16 /* GroceryListUnitTests */,
 				DF6AEC2725923D24003AFBA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +153,7 @@
 				DF0D84BF2599875300EFCC16 /* GroceryItem.swift */,
 				DF0D84DA2599896100EFCC16 /* GroceryList.swift */,
 				DF0D84E1259989CE00EFCC16 /* listData.swift */,
+				DF0D84B02597DEEE00EFCC16 /* AddItemView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -130,6 +165,7 @@
 				DF6AEC2E25923D24003AFBA8 /* GroceryList.app */,
 				DF6AEC3625923D24003AFBA8 /* Tests iOS.xctest */,
 				DF6AEC4125923D25003AFBA8 /* Tests macOS.xctest */,
+				DF0D850E259A484800EFCC16 /* GroceryListUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +209,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DF0D850D259A484800EFCC16 /* GroceryListUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF0D8515259A484800EFCC16 /* Build configuration list for PBXNativeTarget "GroceryListUnitTests" */;
+			buildPhases = (
+				DF0D850A259A484800EFCC16 /* Sources */,
+				DF0D850B259A484800EFCC16 /* Frameworks */,
+				DF0D850C259A484800EFCC16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF0D8514259A484800EFCC16 /* PBXTargetDependency */,
+			);
+			name = GroceryListUnitTests;
+			productName = GroceryListUnitTests;
+			productReference = DF0D850E259A484800EFCC16 /* GroceryListUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DF6AEC2525923D24003AFBA8 /* GroceryList (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF6AEC5025923D25003AFBA8 /* Build configuration list for PBXNativeTarget "GroceryList (iOS)" */;
@@ -256,6 +310,10 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					DF0D850D259A484800EFCC16 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = DF6AEC2525923D24003AFBA8;
+					};
 					DF6AEC2525923D24003AFBA8 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -291,11 +349,19 @@
 				DF6AEC2D25923D24003AFBA8 /* GroceryList (macOS) */,
 				DF6AEC3525923D24003AFBA8 /* Tests iOS */,
 				DF6AEC4025923D25003AFBA8 /* Tests macOS */,
+				DF0D850D259A484800EFCC16 /* GroceryListUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DF0D850C259A484800EFCC16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DF6AEC2425923D24003AFBA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,6 +434,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DF0D850A259A484800EFCC16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF0D8528259A48C900EFCC16 /* GroceryItemTests.swift in Sources */,
+				DF0D8511259A484800EFCC16 /* GroceryListUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DF6AEC2225923D24003AFBA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -378,6 +453,7 @@
 				DF0D84DB2599896100EFCC16 /* GroceryList.swift in Sources */,
 				DF0D84C02599875300EFCC16 /* GroceryItem.swift in Sources */,
 				1383A13511D5561102FA7689 /* ListDetailView.swift in Sources */,
+				DF0D84B12597DEEE00EFCC16 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +467,7 @@
 				DF0D84DC2599896100EFCC16 /* GroceryList.swift in Sources */,
 				DF0D84C12599875300EFCC16 /* GroceryItem.swift in Sources */,
 				1383AA8B495A2B0FF30957C2 /* ListDetailView.swift in Sources */,
+				DF0D84B22597DEEE00EFCC16 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +491,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DF0D8514259A484800EFCC16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF6AEC2525923D24003AFBA8 /* GroceryList (iOS) */;
+			targetProxy = DF0D8513259A484800EFCC16 /* PBXContainerItemProxy */;
+		};
 		DF6AEC3825923D24003AFBA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DF6AEC2525923D24003AFBA8 /* GroceryList (iOS) */;
@@ -427,6 +509,51 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		DF0D8516259A484800EFCC16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84C29N4H5C;
+				INFOPLIST_FILE = GroceryListUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.slichter.GroceryListUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GroceryList.app/GroceryList";
+			};
+			name = Debug;
+		};
+		DF0D8517259A484800EFCC16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84C29N4H5C;
+				INFOPLIST_FILE = GroceryListUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.slichter.GroceryListUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GroceryList.app/GroceryList";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		DF6AEC4E25923D25003AFBA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -727,6 +854,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DF0D8515259A484800EFCC16 /* Build configuration list for PBXNativeTarget "GroceryListUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF0D8516259A484800EFCC16 /* Debug */,
+				DF0D8517259A484800EFCC16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DF6AEC1D25923D21003AFBA8 /* Build configuration list for PBXProject "GroceryList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

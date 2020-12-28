@@ -29,10 +29,16 @@ class GroceryListsView: XCTestCase {
 
         XCTAssert(app.navigationBars.staticTexts["Aldi"].exists)
         XCTAssert(app.navigationBars.buttons["Grocery Lists"].exists)
+        XCTAssert(app.navigationBars.buttons["plus"].exists)
 
         XCTAssert(app.staticTexts["Apples"].exists)
         XCTAssert(app.staticTexts["Kale"].exists)
         XCTAssert(app.staticTexts["Grapes"].exists)
+    }
+
+    func testNavigatToAddItemToList() {
+        app.buttons["Aldi"].tap()
+        app.navigationBars.buttons["plus"].tap()
 
     }
 
