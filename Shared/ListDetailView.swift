@@ -5,18 +5,20 @@
 import SwiftUI
 
 struct ListDetailView: View {
-    let listName: String
+    let groceryList: GroceryList
     var body: some View {
         List {
-            Text("Apples")
-            Text("Kale")
-            Text("Grapes")
-        }.navigationTitle(listName)
+            ForEach(groceryList.items) { item in
+                Text(item.name)
+            }
+        }
+        .navigationTitle(groceryList.storeName)
     }
 }
 
 struct ListDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ListDetailView(listName: "Some List Name")
+
+        ListDetailView(groceryList: aldi)
     }
 }
