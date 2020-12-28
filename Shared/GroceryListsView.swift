@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct GroceryListsView: View {
-    let groceryLists = ["Trader Joe's", "Target", "Aldi"]
+    let groceryLists = [traderJoes, targetList, aldi]
     var body: some View {
         List {
-            ForEach(groceryLists, id: \.self) { groceryList in
-                NavigationLink(destination: ListDetailView(listName: groceryList)) {
-                    Text(groceryList)
-                        .accessibility(identifier: groceryList)
+            ForEach(groceryLists) { groceryList in
+                NavigationLink(destination: ListDetailView(groceryList: groceryList)) {
+                    Text(groceryList.storeName)
+                        .accessibility(identifier: groceryList.storeName)
                 }
             }
         }

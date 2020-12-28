@@ -11,6 +11,10 @@
 		1383AA8B495A2B0FF30957C2 /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1383A8AC4ECAC133F2B46134 /* ListDetailView.swift */; };
 		DF0D84C02599875300EFCC16 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84BF2599875300EFCC16 /* GroceryItem.swift */; };
 		DF0D84C12599875300EFCC16 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84BF2599875300EFCC16 /* GroceryItem.swift */; };
+		DF0D84DB2599896100EFCC16 /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84DA2599896100EFCC16 /* GroceryList.swift */; };
+		DF0D84DC2599896100EFCC16 /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84DA2599896100EFCC16 /* GroceryList.swift */; };
+		DF0D84E2259989CE00EFCC16 /* listData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84E1259989CE00EFCC16 /* listData.swift */; };
+		DF0D84E3259989CE00EFCC16 /* listData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84E1259989CE00EFCC16 /* listData.swift */; };
 		DF6AEC3B25923D24003AFBA8 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC3A25923D24003AFBA8 /* Tests_iOS.swift */; };
 		DF6AEC4625923D25003AFBA8 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC4525923D25003AFBA8 /* Tests_macOS.swift */; };
 		DF6AEC4825923D25003AFBA8 /* GroceryListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC1F25923D21003AFBA8 /* GroceryListApp.swift */; };
@@ -42,6 +46,8 @@
 /* Begin PBXFileReference section */
 		1383A8AC4ECAC133F2B46134 /* ListDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
 		DF0D84BF2599875300EFCC16 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
+		DF0D84DA2599896100EFCC16 /* GroceryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
+		DF0D84E1259989CE00EFCC16 /* listData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listData.swift; sourceTree = "<group>"; };
 		DF6AEC1F25923D21003AFBA8 /* GroceryListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListApp.swift; sourceTree = "<group>"; };
 		DF6AEC2125923D24003AFBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF6AEC2625923D24003AFBA8 /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +117,8 @@
 				DF6AEC912595836A003AFBA8 /* GroceryListsView.swift */,
 				1383A8AC4ECAC133F2B46134 /* ListDetailView.swift */,
 				DF0D84BF2599875300EFCC16 /* GroceryItem.swift */,
+				DF0D84DA2599896100EFCC16 /* GroceryList.swift */,
+				DF0D84E1259989CE00EFCC16 /* listData.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -365,7 +373,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6AEC922595836A003AFBA8 /* GroceryListsView.swift in Sources */,
+				DF0D84E2259989CE00EFCC16 /* listData.swift in Sources */,
 				DF6AEC4825923D25003AFBA8 /* GroceryListApp.swift in Sources */,
+				DF0D84DB2599896100EFCC16 /* GroceryList.swift in Sources */,
 				DF0D84C02599875300EFCC16 /* GroceryItem.swift in Sources */,
 				1383A13511D5561102FA7689 /* ListDetailView.swift in Sources */,
 			);
@@ -376,7 +386,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6AEC932595836A003AFBA8 /* GroceryListsView.swift in Sources */,
+				DF0D84E3259989CE00EFCC16 /* listData.swift in Sources */,
 				DF6AEC4925923D25003AFBA8 /* GroceryListApp.swift in Sources */,
+				DF0D84DC2599896100EFCC16 /* GroceryList.swift in Sources */,
 				DF0D84C12599875300EFCC16 /* GroceryItem.swift in Sources */,
 				1383AA8B495A2B0FF30957C2 /* ListDetailView.swift in Sources */,
 			);
