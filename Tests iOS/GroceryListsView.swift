@@ -51,4 +51,17 @@ class GroceryListsView: XCTestCase {
         XCTAssert(app.staticTexts[newItem].exists)
     }
 
+    func testAddNewGroceryList() {
+        let newStore = "Store"
+        app.navigationBars.buttons["plus"].tap()
+
+        let textField = app.textFields.firstMatch
+
+        XCTAssertEqual(textField.placeholderValue, "Store Name")
+        textField.tap()
+        textField.typeText(newStore)
+        app.navigationBars.buttons["Add"].tap()
+        XCTAssert(app.buttons[newStore].exists)
+    }
+
 }
