@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct GroceryListsView: View {
-    let groceryLists = [traderJoes, targetList, aldi]
+    @State private var isPresented = false
+    @State private var newGroceryList = GroceryList.Data()
+    @State var groceryLists = [traderJoes, targetList, aldi]
+
     var body: some View {
         List {
             ForEach(groceryLists) { groceryList in
@@ -19,6 +22,26 @@ struct GroceryListsView: View {
             }
         }
         .navigationTitle("Grocery Lists")
+        .navigationBarItems(trailing: Button(action: {
+            isPresented = true
+        }) {
+            Image(systemName: "plus")
+        })
+        .sheet(isPresented: $isPresented) {
+            NavigationView {
+                AddGroceryListView(listData: $newGroceryList)
+                        .navigationBarItems(leading: Button("Dismiss") {
+                            isPresented = false
+                        }, trailing: Button("Add") {
+                            let newList = GroceryList(storeName: newGroceryList.storeName,
+                                                      items: newGroceryList.items)
+
+                            groceryLists.append(newList)
+                            isPresented = false
+                        })
+            }
+
+        }
 
     }
 }

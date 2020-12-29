@@ -27,7 +27,6 @@ struct ListDetailView: View {
                         .navigationBarItems(leading: Button("Dismiss") {
                             isPresented = false
                         }, trailing: Button("Add") {
-//                            test this
                             let newItem = GroceryItem(name: newGroceryItem.name)
                             groceryList.items.append(newItem)
                             isPresented = false

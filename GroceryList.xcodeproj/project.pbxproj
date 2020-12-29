@@ -19,6 +19,9 @@
 		DF0D84E3259989CE00EFCC16 /* listData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84E1259989CE00EFCC16 /* listData.swift */; };
 		DF0D8511259A484800EFCC16 /* GroceryListUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D8510259A484800EFCC16 /* GroceryListUnitTests.swift */; };
 		DF0D8528259A48C900EFCC16 /* GroceryItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D8527259A48C900EFCC16 /* GroceryItemTests.swift */; };
+		DF0D854B259B788A00EFCC16 /* AddGroceryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D854A259B788A00EFCC16 /* AddGroceryListView.swift */; };
+		DF0D854C259B788A00EFCC16 /* AddGroceryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D854A259B788A00EFCC16 /* AddGroceryListView.swift */; };
+		DF0D855D259B7E7500EFCC16 /* GroceryListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D855C259B7E7500EFCC16 /* GroceryListTests.swift */; };
 		DF6AEC3B25923D24003AFBA8 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC3A25923D24003AFBA8 /* Tests_iOS.swift */; };
 		DF6AEC4625923D25003AFBA8 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC4525923D25003AFBA8 /* Tests_macOS.swift */; };
 		DF6AEC4825923D25003AFBA8 /* GroceryListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC1F25923D21003AFBA8 /* GroceryListApp.swift */; };
@@ -64,6 +67,8 @@
 		DF0D8510259A484800EFCC16 /* GroceryListUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListUnitTests.swift; sourceTree = "<group>"; };
 		DF0D8512259A484800EFCC16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF0D8527259A48C900EFCC16 /* GroceryItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTests.swift; sourceTree = "<group>"; };
+		DF0D854A259B788A00EFCC16 /* AddGroceryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroceryListView.swift; sourceTree = "<group>"; };
+		DF0D855C259B7E7500EFCC16 /* GroceryListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListTests.swift; sourceTree = "<group>"; };
 		DF6AEC1F25923D21003AFBA8 /* GroceryListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListApp.swift; sourceTree = "<group>"; };
 		DF6AEC2125923D24003AFBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF6AEC2625923D24003AFBA8 /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +131,7 @@
 				DF0D8510259A484800EFCC16 /* GroceryListUnitTests.swift */,
 				DF0D8512259A484800EFCC16 /* Info.plist */,
 				DF0D8527259A48C900EFCC16 /* GroceryItemTests.swift */,
+				DF0D855C259B7E7500EFCC16 /* GroceryListTests.swift */,
 			);
 			path = GroceryListUnitTests;
 			sourceTree = "<group>";
@@ -154,6 +160,7 @@
 				DF0D84DA2599896100EFCC16 /* GroceryList.swift */,
 				DF0D84E1259989CE00EFCC16 /* listData.swift */,
 				DF0D84B02597DEEE00EFCC16 /* AddItemView.swift */,
+				DF0D854A259B788A00EFCC16 /* AddGroceryListView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -440,6 +447,7 @@
 			files = (
 				DF0D8528259A48C900EFCC16 /* GroceryItemTests.swift in Sources */,
 				DF0D8511259A484800EFCC16 /* GroceryListUnitTests.swift in Sources */,
+				DF0D855D259B7E7500EFCC16 /* GroceryListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +461,7 @@
 				DF0D84DB2599896100EFCC16 /* GroceryList.swift in Sources */,
 				DF0D84C02599875300EFCC16 /* GroceryItem.swift in Sources */,
 				1383A13511D5561102FA7689 /* ListDetailView.swift in Sources */,
+				DF0D854B259B788A00EFCC16 /* AddGroceryListView.swift in Sources */,
 				DF0D84B12597DEEE00EFCC16 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +476,7 @@
 				DF0D84DC2599896100EFCC16 /* GroceryList.swift in Sources */,
 				DF0D84C12599875300EFCC16 /* GroceryItem.swift in Sources */,
 				1383AA8B495A2B0FF30957C2 /* ListDetailView.swift in Sources */,
+				DF0D854C259B788A00EFCC16 /* AddGroceryListView.swift in Sources */,
 				DF0D84B22597DEEE00EFCC16 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

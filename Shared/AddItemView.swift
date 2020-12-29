@@ -12,8 +12,7 @@ struct AddItemView: View {
 
     var body: some View {
         List {
-            Section(header:
-                        Text("New Grocery Item")
+            Section(header: Text("New Grocery Item")
                         .accessibility(identifier: "newItemForm")
             ) {
                 TextField("Item Name", text: $itemData.name)

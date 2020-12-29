@@ -9,6 +9,21 @@ import Foundation
 
 struct GroceryList: Identifiable {
     let id = UUID()
-    let storeName: String
+    var storeName: String
     var items: [GroceryItem]
+}
+
+extension GroceryList {
+    struct Data {
+        var storeName: String = ""
+        var items: [GroceryItem] = []
+
+        var data: Data {
+            Data(storeName: storeName)
+        }
+
+        mutating func update(from data: Data) {
+            storeName = data.storeName
+        }
+    }
 }
