@@ -27,18 +27,22 @@ struct ListDetailView: View {
                         .navigationBarItems(leading: Button("Dismiss") {
                             isPresented = false
                         }, trailing: Button("Add") {
-                            let newItem = GroceryItem(name: newGroceryItem.name)
+                            let newItem = GroceryItem(name: newGroceryItem.name,
+                                                      storeSection: newGroceryItem.storeSection,
+                                                      notes: newGroceryItem.notes)
                             groceryList.items.append(newItem)
+                            newGroceryItem = GroceryItem.Data()
                             isPresented = false
                         })
-            }
+            }   
 
         }
     }
 }
 
-struct ListDetailView_Previews: PreviewProvider {
+ struct ListDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ListDetailView(groceryList: aldi)
+        let groceryList = GroceryList(storeName: "A Store", items: [])
+        ListDetailView(groceryList: groceryList)
     }
-}
+ }

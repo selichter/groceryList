@@ -15,8 +15,6 @@
 		DF0D84C12599875300EFCC16 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84BF2599875300EFCC16 /* GroceryItem.swift */; };
 		DF0D84DB2599896100EFCC16 /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84DA2599896100EFCC16 /* GroceryList.swift */; };
 		DF0D84DC2599896100EFCC16 /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84DA2599896100EFCC16 /* GroceryList.swift */; };
-		DF0D84E2259989CE00EFCC16 /* listData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84E1259989CE00EFCC16 /* listData.swift */; };
-		DF0D84E3259989CE00EFCC16 /* listData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D84E1259989CE00EFCC16 /* listData.swift */; };
 		DF0D8511259A484800EFCC16 /* GroceryListUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D8510259A484800EFCC16 /* GroceryListUnitTests.swift */; };
 		DF0D8528259A48C900EFCC16 /* GroceryItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D8527259A48C900EFCC16 /* GroceryItemTests.swift */; };
 		DF0D854B259B788A00EFCC16 /* AddGroceryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0D854A259B788A00EFCC16 /* AddGroceryListView.swift */; };
@@ -31,6 +29,8 @@
 		DF6AEC922595836A003AFBA8 /* GroceryListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC912595836A003AFBA8 /* GroceryListsView.swift */; };
 		DF6AEC932595836A003AFBA8 /* GroceryListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC912595836A003AFBA8 /* GroceryListsView.swift */; };
 		DF6AEC9925958650003AFBA8 /* GroceryListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AEC9825958650003AFBA8 /* GroceryListsView.swift */; };
+		DFE5F679259BC59C00ABA249 /* GroceryItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE5F678259BC59C00ABA249 /* GroceryItemTests.swift */; };
+		DFE5F69C259C297600ABA249 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE5F69B259C297600ABA249 /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 		DF0D84B02597DEEE00EFCC16 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		DF0D84BF2599875300EFCC16 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		DF0D84DA2599896100EFCC16 /* GroceryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
-		DF0D84E1259989CE00EFCC16 /* listData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listData.swift; sourceTree = "<group>"; };
 		DF0D850E259A484800EFCC16 /* GroceryListUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryListUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0D8510259A484800EFCC16 /* GroceryListUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListUnitTests.swift; sourceTree = "<group>"; };
 		DF0D8512259A484800EFCC16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +83,8 @@
 		DF6AEC4725923D25003AFBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF6AEC912595836A003AFBA8 /* GroceryListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListsView.swift; sourceTree = "<group>"; };
 		DF6AEC9825958650003AFBA8 /* GroceryListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListsView.swift; sourceTree = "<group>"; };
+		DFE5F678259BC59C00ABA249 /* GroceryItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTests.swift; sourceTree = "<group>"; };
+		DFE5F69B259C297600ABA249 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +159,6 @@
 				1383A8AC4ECAC133F2B46134 /* ListDetailView.swift */,
 				DF0D84BF2599875300EFCC16 /* GroceryItem.swift */,
 				DF0D84DA2599896100EFCC16 /* GroceryList.swift */,
-				DF0D84E1259989CE00EFCC16 /* listData.swift */,
 				DF0D84B02597DEEE00EFCC16 /* AddItemView.swift */,
 				DF0D854A259B788A00EFCC16 /* AddGroceryListView.swift */,
 			);
@@ -200,6 +200,8 @@
 				DF6AEC3A25923D24003AFBA8 /* Tests_iOS.swift */,
 				DF6AEC3C25923D25003AFBA8 /* Info.plist */,
 				DF6AEC9825958650003AFBA8 /* GroceryListsView.swift */,
+				DFE5F678259BC59C00ABA249 /* GroceryItemTests.swift */,
+				DFE5F69B259C297600ABA249 /* TestHelpers.swift */,
 			);
 			path = "Tests iOS";
 			sourceTree = "<group>";
@@ -418,7 +420,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 		};
 		DF6AEC6C25926622003AFBA8 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -436,7 +439,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -456,7 +460,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6AEC922595836A003AFBA8 /* GroceryListsView.swift in Sources */,
-				DF0D84E2259989CE00EFCC16 /* listData.swift in Sources */,
 				DF6AEC4825923D25003AFBA8 /* GroceryListApp.swift in Sources */,
 				DF0D84DB2599896100EFCC16 /* GroceryList.swift in Sources */,
 				DF0D84C02599875300EFCC16 /* GroceryItem.swift in Sources */,
@@ -471,7 +474,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6AEC932595836A003AFBA8 /* GroceryListsView.swift in Sources */,
-				DF0D84E3259989CE00EFCC16 /* listData.swift in Sources */,
 				DF6AEC4925923D25003AFBA8 /* GroceryListApp.swift in Sources */,
 				DF0D84DC2599896100EFCC16 /* GroceryList.swift in Sources */,
 				DF0D84C12599875300EFCC16 /* GroceryItem.swift in Sources */,
@@ -486,7 +488,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF6AEC9925958650003AFBA8 /* GroceryListsView.swift in Sources */,
+				DFE5F679259BC59C00ABA249 /* GroceryItemTests.swift in Sources */,
 				DF6AEC3B25923D24003AFBA8 /* Tests_iOS.swift in Sources */,
+				DFE5F69C259C297600ABA249 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
