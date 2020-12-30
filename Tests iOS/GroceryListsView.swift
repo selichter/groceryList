@@ -9,6 +9,7 @@ import XCTest
 
 class GroceryListsView: XCTestCase {
     let app = XCUIApplication()
+    let newStore = "Store"
 
     override func setUpWithError() throws {
         app.launch()
@@ -18,50 +19,36 @@ class GroceryListsView: XCTestCase {
         XCTAssert(app.navigationBars.staticTexts["Grocery Lists"].exists)
     }
 
-    func testHardcodedGroceryListNamesAreDisplayed() {
-        XCTAssert(app.buttons["Trader Joe's"].exists)
-        XCTAssert(app.buttons["Target"].exists)
-        XCTAssert(app.buttons["Aldi"].exists)
-    }
-
-    func testTappingOnStoreNameNavigatesToThatList() {
-        app.buttons["Aldi"].tap()
-
-        XCTAssert(app.navigationBars.staticTexts["Aldi"].exists)
-        XCTAssert(app.navigationBars.buttons["Grocery Lists"].exists)
-        XCTAssert(app.navigationBars.buttons["plus"].exists)
-
-        XCTAssert(app.staticTexts["Apples"].exists)
-        XCTAssert(app.staticTexts["Kale"].exists)
-        XCTAssert(app.staticTexts["Grapes"].exists)
-    }
-
-    func testAddNewItemToGroceryList() {
-        let newItem = "something"
-        app.buttons["Aldi"].tap()
-        app.navigationBars.buttons["plus"].tap()
-
-        let textField = app.textFields.firstMatch
-
-        XCTAssertEqual(textField.placeholderValue, "Item Name")
-
-        textField.tap()
-        textField.typeText(newItem)
-        app.navigationBars.buttons["Add"].tap()
-        XCTAssert(app.staticTexts[newItem].exists)
-    }
-
     func testAddNewGroceryList() {
-        let newStore = "Store"
         app.navigationBars.buttons["plus"].tap()
-
-        let textField = app.textFields.firstMatch
-
-        XCTAssertEqual(textField.placeholderValue, "Store Name")
-        textField.tap()
-        textField.typeText(newStore)
+        
+        enterTextInTextField(text: newStore, textField: app.textFields["storeName"])
         app.navigationBars.buttons["Add"].tap()
+        
         XCTAssert(app.buttons[newStore].exists)
     }
 
+    func testDismissNewGroceryList() {
+        app.navigationBars.buttons["plus"].tap()
+
+        enterTextInTextField(text: newStore, textField: app.textFields["storeName"])
+        app.navigationBars.buttons["Dismiss"].tap()
+        
+        XCTAssertFalse(app.buttons[newStore].exists)
+    }
+    
+    func testAddingMultipleGroceryLists() {
+        app.navigationBars.buttons["plus"].tap()
+
+        enterTextInTextField(text: newStore, textField: app.textFields["storeName"])
+        app.navigationBars.buttons["Add"].tap()
+        
+        app.navigationBars.buttons["plus"].tap()
+        
+        enterTextInTextField(text: "Second Store", textField: app.textFields["storeName"])
+        app.navigationBars.buttons["Add"].tap()
+        
+        XCTAssert(app.buttons[newStore].exists)
+        XCTAssert(app.buttons["Second Store"].exists)
+    }
 }

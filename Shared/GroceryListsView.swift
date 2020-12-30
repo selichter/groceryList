@@ -10,7 +10,7 @@ import SwiftUI
 struct GroceryListsView: View {
     @State private var isPresented = false
     @State private var newGroceryList = GroceryList.Data()
-    @State var groceryLists = [traderJoes, targetList, aldi]
+    @State var groceryLists: [GroceryList] = []
 
     var body: some View {
         List {
@@ -37,6 +37,7 @@ struct GroceryListsView: View {
                                                       items: newGroceryList.items)
 
                             groceryLists.append(newList)
+                            newGroceryList = GroceryList.Data()
                             isPresented = false
                         })
             }

@@ -16,6 +16,15 @@ struct AddItemView: View {
                         .accessibility(identifier: "newItemForm")
             ) {
                 TextField("Item Name", text: $itemData.name)
+                
+                Picker("Store Section", selection: $itemData.storeSection) {
+                            ForEach(StoreSection.allCases, id: \.self) { value in
+                                Text(value.localizedName)
+                                        .tag(value)
+                            }
+                }
+
+                TextField("Notes", text: $itemData.notes)
             }
 
         }

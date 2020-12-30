@@ -14,6 +14,7 @@ struct AddGroceryListView: View {
         List {
             Section(header: Text("New Grocery List")) {
                 TextField("Store Name", text: $listData.storeName)
+                    .accessibility(identifier: "storeName")
             }
         }.listStyle(InsetGroupedListStyle())
 
