@@ -137,6 +137,26 @@
 			path = GroceryListUnitTests;
 			sourceTree = "<group>";
 		};
+		DF2F0463259EB210004505FB /* GroceryList */ = {
+			isa = PBXGroup;
+			children = (
+				DF0D854A259B788A00EFCC16 /* AddGroceryListView.swift */,
+				DF6AEC912595836A003AFBA8 /* GroceryListsView.swift */,
+				DF0D84DA2599896100EFCC16 /* GroceryList.swift */,
+			);
+			path = GroceryList;
+			sourceTree = "<group>";
+		};
+		DF2F0464259EB21D004505FB /* GroceryItem */ = {
+			isa = PBXGroup;
+			children = (
+				DF0D84B02597DEEE00EFCC16 /* AddItemView.swift */,
+				DF0D84BF2599875300EFCC16 /* GroceryItem.swift */,
+				1383A8AC4ECAC133F2B46134 /* ListDetailView.swift */,
+			);
+			path = GroceryItem;
+			sourceTree = "<group>";
+		};
 		DF6AEC1925923D21003AFBA8 = {
 			isa = PBXGroup;
 			children = (
@@ -153,14 +173,10 @@
 		DF6AEC1E25923D21003AFBA8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DF2F0464259EB21D004505FB /* GroceryItem */,
+				DF2F0463259EB210004505FB /* GroceryList */,
 				DF6AEC1F25923D21003AFBA8 /* GroceryListApp.swift */,
 				DF6AEC2125923D24003AFBA8 /* Assets.xcassets */,
-				DF6AEC912595836A003AFBA8 /* GroceryListsView.swift */,
-				1383A8AC4ECAC133F2B46134 /* ListDetailView.swift */,
-				DF0D84BF2599875300EFCC16 /* GroceryItem.swift */,
-				DF0D84DA2599896100EFCC16 /* GroceryList.swift */,
-				DF0D84B02597DEEE00EFCC16 /* AddItemView.swift */,
-				DF0D854A259B788A00EFCC16 /* AddGroceryListView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
