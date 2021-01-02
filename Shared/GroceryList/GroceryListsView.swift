@@ -16,8 +16,15 @@ struct GroceryListsView: View {
         List {
             ForEach(groceryLists) { groceryList in
                 NavigationLink(destination: ListDetailView(groceryList: groceryList)) {
-                    Text(groceryList.storeName)
-                        .accessibility(identifier: groceryList.storeName)
+                    VStack(alignment: .leading) {
+                        Text(groceryList.storeName)
+                            .font(.title)
+                            .accessibility(identifier: groceryList.storeName)
+                        Text("\(groceryList.items.count) items")
+                            .font(.caption)
+                            
+                    }
+                    
                 }
             }
         }
