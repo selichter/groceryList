@@ -12,7 +12,24 @@ struct ListDetailView: View {
     var body: some View {
         List {
             ForEach(groceryList.items) { item in
-                Label(item.name, systemImage: "circle")
+                HStack {
+                    Image(systemName: "circle")
+                    VStack(alignment: .leading) {
+                        
+                        Text(item.name)
+                            .font(.title2)
+                        HStack {
+                            Text(item.storeSection.rawValue)
+                            Spacer()
+                            Text(item.notes)
+                        }
+                        .font(.caption)
+                        
+                        
+                    }
+                }
+                
+                
             }
         }
         .navigationTitle(groceryList.storeName)

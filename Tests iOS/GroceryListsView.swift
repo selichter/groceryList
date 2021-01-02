@@ -26,6 +26,7 @@ class GroceryListsView: XCTestCase {
         app.navigationBars.buttons["Add"].tap()
         
         XCTAssert(app.buttons[newStore].exists)
+        XCTAssertEqual(app.tables.cells.firstMatch.label, "Store, 0 items")
     }
 
     func testDismissNewGroceryList() {
