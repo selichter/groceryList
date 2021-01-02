@@ -46,6 +46,8 @@ class GroceryItemTests: XCTestCase {
         
         app.navigationBars.buttons["Add"].tap()
         XCTAssert(app.staticTexts[itemName].exists)
+        XCTAssert(app.staticTexts["Produce"].exists)
+        XCTAssert(app.staticTexts[itemNotes].exists)
     }
 
 }
