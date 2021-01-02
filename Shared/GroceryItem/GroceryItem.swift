@@ -8,13 +8,18 @@
 import Foundation
 import SwiftUI
 
-// UPDATE TESTS
 
-struct GroceryItem: Identifiable {
-    let id = UUID()
+struct GroceryItem: Identifiable, Codable {
+    var id = UUID()
     var name: String
     var storeSection: StoreSection
     var notes: String
+    
+    init(name: String, storeSection: StoreSection, notes: String) {
+        self.name = name
+        self.storeSection = storeSection
+        self.notes = notes
+    }
 }
 
 extension GroceryItem {
@@ -37,7 +42,7 @@ extension GroceryItem {
     }
 }
 
-enum StoreSection: String, Equatable, CaseIterable {
+enum StoreSection: String, Equatable, CaseIterable, Codable {
     case produce = "Produce"
     case dairy = "Dairy"
     case meat = "Meat"
