@@ -29,11 +29,8 @@ struct GroceryListsView: View {
                             .font(.caption)
 
                     }
-                    
                 }
-            
-                
-            }
+            }.onDelete(perform: delete)
         }
         .navigationTitle("Grocery Lists")
         .navigationBarItems(trailing: Button(action: {
@@ -47,11 +44,13 @@ struct GroceryListsView: View {
                         .navigationBarItems(leading: Button("Dismiss") {
                             isPresented = false
                         }, trailing: Button("Add") {
-                            let newList = GroceryList(storeName: newGroceryList.storeName,
+                            var newList = GroceryList(storeName: newGroceryList.storeName,
                                                       items: newGroceryList.items)
 
                             groceryLists.append(newList)
                             saveAction()
+                            newGroceryList.storeName = ""
+                            newGroceryList.items = []
                             isPresented = false
                         })
             }
@@ -71,6 +70,11 @@ struct GroceryListsView: View {
             fatalError("Can't find grocery list in array")
         }
         return $groceryLists[groceryListIndex]
+    }
+    
+    func delete(at offsets: IndexSet) {
+        groceryLists.remove(atOffsets: offsets)
+        saveAction()
     }
     
 

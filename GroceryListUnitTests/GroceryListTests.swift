@@ -25,19 +25,4 @@ class GroceryListTests: XCTestCase {
         XCTAssertTrue(list.items.isEmpty)
     }
 
-    func testUpdateFromDataUpdatesList() {
-        let firstName = "first name"
-        let updatedName = "A new name"
-        var data: GroceryList.Data = GroceryList.Data()
-        var groceryList = GroceryList.Data(storeName: firstName)
-
-        XCTAssertEqual(groceryList.storeName, firstName)
-
-        data.storeName = updatedName
-
-        groceryList.update(from: data)
-
-        XCTAssertEqual(groceryList.storeName, updatedName)
-    }
-
 }

@@ -13,6 +13,15 @@ class GroceryListsView: XCTestCase {
 
     override func setUpWithError() throws {
         app.launch()
+        
+        let tablesQuery = app.tables.cells
+        clearItems(tablesQuery: tablesQuery)
+
+    }
+    
+    override func tearDown() {
+        let tablesQuery = app.tables.cells
+        clearItems(tablesQuery: tablesQuery)
     }
 
     func testGroceryListsTitleIsDisplayed() throws {
@@ -32,10 +41,10 @@ class GroceryListsView: XCTestCase {
     func testDismissNewGroceryList() {
         app.navigationBars.buttons["plus"].tap()
 
-        enterTextInTextField(text: newStore, textField: app.textFields["storeName"])
+        enterTextInTextField(text: "different place", textField: app.textFields["storeName"])
         app.navigationBars.buttons["Dismiss"].tap()
         
-        XCTAssertFalse(app.buttons[newStore].exists)
+        XCTAssertFalse(app.buttons["different place"].exists)
     }
     
     func testAddingMultipleGroceryLists() {
@@ -52,4 +61,5 @@ class GroceryListsView: XCTestCase {
         XCTAssert(app.buttons[newStore].exists)
         XCTAssert(app.buttons["Second Store"].exists)
     }
+    
 }

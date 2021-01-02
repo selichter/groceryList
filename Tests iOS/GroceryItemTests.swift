@@ -16,11 +16,14 @@ class GroceryItemTests: XCTestCase {
 
     override func setUpWithError() throws {
         app.launch()
+        let tablesQuery = app.tables.cells
+        clearItems(tablesQuery: tablesQuery)
         app.navigationBars.buttons["plus"].tap()
         enterTextInTextField(text: listName, textField: app.textFields["storeName"])
 
         app.navigationBars.buttons["Add"].tap()
     }
+    
     
     func testDismissNewGroceryItem() {
         app.buttons[listName].tap()
