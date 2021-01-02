@@ -13,3 +13,11 @@ func enterTextInTextField(text: String, textField: XCUIElement) {
     textField.tap()
     textField.typeText(text)
 }
+
+
+func clearItems(tablesQuery: XCUIElementQuery) {
+    while tablesQuery.count > 0 {
+        tablesQuery.element(boundBy: 0).swipeLeft()
+        tablesQuery.element(boundBy: 0).buttons["Delete"].tap()
+    }
+}

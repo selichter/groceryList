@@ -5,9 +5,11 @@
 import SwiftUI
 
 struct ListDetailView: View {
-    @State var groceryList: GroceryList
+    @Binding var groceryList: GroceryList
     @State private var isPresented = false
     @State private var newGroceryItem = GroceryItem.Data()
+    
+    let saveAction: () -> Void
 
     var body: some View {
         List {
@@ -24,8 +26,6 @@ struct ListDetailView: View {
                             Text(item.notes)
                         }
                         .font(.caption)
-                        
-                        
                     }
                 }
                 
@@ -47,8 +47,10 @@ struct ListDetailView: View {
                             let newItem = GroceryItem(name: newGroceryItem.name,
                                                       storeSection: newGroceryItem.storeSection,
                                                       notes: newGroceryItem.notes)
+                            
                             groceryList.items.append(newItem)
-                            newGroceryItem = GroceryItem.Data()
+                            groceryList.update(from: groceryList.data)
+                            saveAction()
                             isPresented = false
                         })
             }   
@@ -59,7 +61,11 @@ struct ListDetailView: View {
 
  struct ListDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let groceryList = GroceryList(storeName: "A Store", items: [])
-        ListDetailView(groceryList: groceryList)
+        let item = GroceryItem(name: "An Item", storeSection: .baking, notes: "For baking")
+        let groceryList = GroceryList(storeName: "A Store", items: [item])
+        NavigationView {
+            ListDetailView(groceryList: .constant(groceryList), saveAction: {})
+        }
+        
     }
  }

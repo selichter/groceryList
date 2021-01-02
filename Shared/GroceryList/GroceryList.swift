@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct GroceryList: Identifiable {
-    let id = UUID()
+struct GroceryList: Identifiable, Codable {
+    var id = UUID()
     var storeName: String
     var items: [GroceryItem]
 }
@@ -17,13 +17,14 @@ extension GroceryList {
     struct Data {
         var storeName: String = ""
         var items: [GroceryItem] = []
+    }
 
-        var data: Data {
-            Data(storeName: storeName)
-        }
-
-        mutating func update(from data: Data) {
-            storeName = data.storeName
-        }
+    var data: Data {
+        Data(storeName: storeName, items: items)
+    }
+    
+    mutating func update(from data: Data) {
+        storeName = data.storeName
+        items = data.items
     }
 }

@@ -9,10 +9,17 @@ import SwiftUI
 
 @main
 struct GroceryListApp: App {
+    @ObservedObject private var data = GroceryListData()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                GroceryListsView()
+                GroceryListsView(groceryLists: $data.groceryLists) {
+                    data.save()
+                }
+            }
+            .onAppear {
+                data.load()
             }
         }
     }
