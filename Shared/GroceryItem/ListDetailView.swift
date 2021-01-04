@@ -34,7 +34,9 @@ struct ListDetailView: View {
                         }, trailing: Button("Add") {
                             let newItem = GroceryItem(name: newGroceryItem.name,
                                                       storeSection: newGroceryItem.storeSection,
-                                                      notes: newGroceryItem.notes)
+                                                      notes: newGroceryItem.notes,
+                                                      amount: newGroceryItem.amount,
+                                                      size: newGroceryItem.size)
                             
                             groceryList.items.append(newItem)
                             groceryList.update(from: groceryList.data)
@@ -57,7 +59,7 @@ struct ListDetailView: View {
 
  struct ListDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let item = GroceryItem(name: "An Item", storeSection: .baking, notes: "For baking")
+        let item = GroceryItem(name: "An Item", storeSection: .baking, notes: "For baking", amount: "1", size: "Bunch")
         let groceryList = GroceryList(storeName: "A Store", items: [item])
         NavigationView {
             ListDetailView(groceryList: .constant(groceryList), saveAction: {})

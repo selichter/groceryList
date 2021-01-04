@@ -18,7 +18,7 @@ struct ItemCell: View {
                     Text(item.name)
                         .font(.title2)
                     HStack {
-                        Text(item.storeSection.rawValue)
+                        Text("\(item.amount) \(item.size)")
                         Spacer()
                         Text(item.notes)
                     }
@@ -33,7 +33,7 @@ struct ItemCell: View {
 
 struct ItemCell_Previews: PreviewProvider {
     static var previews: some View {
-        let item = GroceryItem(name: "An Item", storeSection: .baking, notes: "For baking")
+        let item = GroceryItem(name: "An Item", storeSection: .baking, notes: "For baking", amount: "7", size: "cups")
         ItemCell(item: .constant(item))
     }
 }
