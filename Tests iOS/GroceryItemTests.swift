@@ -45,20 +45,21 @@ class GroceryItemTests: XCTestCase {
         app.buttons["Store Section"].tap()
         app.buttons["Produce"].tap()
         
+        enterTextInTextField(text: "1", textField: app.textFields["Amount"])
+        enterTextInTextField(text: "Cup", textField: app.textFields["Size"])
+        
         enterTextInTextField(text: itemNotes, textField: app.textFields["Notes"])
         
         app.navigationBars.buttons["Add"].tap()
-        XCTAssert(app.staticTexts[itemName].exists)
         
         let tablesQuery = app.tables.cells
         
         let cell = tablesQuery.element(boundBy: 0)
-        cell.waitForExistence(timeout: 2)
+        cell.waitForExistence(timeout: 4)
         
-        XCTAssertEqual(cell.label, "Some Item, Produce, Sample Notes")
-    }
-        let tablesQuery = app.tables.cells
-        XCTAssert(app.staticTexts[itemNotes].exists)
+        XCTAssertEqual(cell.label, "Some Item, 1 Cup, Sample Notes")
+
+
     }
 
 }

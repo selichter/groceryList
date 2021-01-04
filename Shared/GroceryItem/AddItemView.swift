@@ -23,6 +23,8 @@ struct AddItemView: View {
                                         .tag(value)
                             }
                 }
+                TextField("Amount", text: $itemData.amount)
+                TextField("Size", text: $itemData.size)
 
                 TextField("Notes", text: $itemData.notes)
             }

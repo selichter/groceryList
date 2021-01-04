@@ -15,28 +15,36 @@ struct GroceryItem: Identifiable, Codable {
     var storeSection: StoreSection
     var notes: String
     var purchased = false
+    var amount: String
+    var size: String
     
-    init(name: String, storeSection: StoreSection, notes: String) {
+    init(name: String, storeSection: StoreSection, notes: String, amount: String, size: String) {
         self.name = name
         self.storeSection = storeSection
         self.notes = notes
+        self.amount = amount
+        self.size = size
         
     }
 }
 
 extension GroceryItem {
     struct Data {
-        var name: String = ""
+        var name = ""
         var storeSection = StoreSection.empty
         var notes = ""
         var purchased = false
+        var amount = ""
+        var size = ""
     }
 
     var data: Data {
         return Data(name: name,
                     storeSection: storeSection,
                     notes: notes,
-                    purchased: purchased
+                    purchased: purchased,
+                    amount: amount,
+                    size: size
         )
     }
 
@@ -45,10 +53,8 @@ extension GroceryItem {
         storeSection = data.storeSection
         notes = data.notes
         purchased = data.purchased
-    }
-    
-    mutating func toggleStatus() {
-        purchased = !purchased
+        amount = data.amount
+        size = data.size
     }
 }
 
