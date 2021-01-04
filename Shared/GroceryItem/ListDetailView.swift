@@ -14,23 +14,11 @@ struct ListDetailView: View {
     var body: some View {
         List {
             ForEach(groceryList.items) { item in
-                HStack {
-                    Image(systemName: "circle")
-                    VStack(alignment: .leading) {
-                        
-                        Text(item.name)
-                            .font(.title2)
-                        HStack {
-                            Text(item.storeSection.rawValue)
-                            Spacer()
-                            Text(item.notes)
-                        }
-                        .font(.caption)
-                    }
-                }
-                
-                
+                ItemCell(item: binding(for: item))
             }
+        }
+        .onDisappear() {
+            saveAction()
         }
         .navigationTitle(groceryList.storeName)
         .navigationBarItems(trailing: Button(action: {
@@ -57,6 +45,14 @@ struct ListDetailView: View {
 
         }
     }
+    
+    
+    private func binding(for groceryItem: GroceryItem) -> Binding<GroceryItem> {
+        guard let groceryItemIndex = groceryList.items.firstIndex(where: { $0.id == groceryItem.id}) else {
+            fatalError("Can't find grocery list in array")
+        }
+        return $groceryList.items[groceryItemIndex]
+    }
 }
 
  struct ListDetailView_Previews: PreviewProvider {
@@ -69,3 +65,4 @@ struct ListDetailView: View {
         
     }
  }
+

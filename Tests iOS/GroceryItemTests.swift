@@ -49,7 +49,15 @@ class GroceryItemTests: XCTestCase {
         
         app.navigationBars.buttons["Add"].tap()
         XCTAssert(app.staticTexts[itemName].exists)
-        XCTAssert(app.staticTexts["Produce"].exists)
+        
+        let tablesQuery = app.tables.cells
+        
+        let cell = tablesQuery.element(boundBy: 0)
+        cell.waitForExistence(timeout: 2)
+        
+        XCTAssertEqual(cell.label, "Some Item, Produce, Sample Notes")
+    }
+        let tablesQuery = app.tables.cells
         XCTAssert(app.staticTexts[itemNotes].exists)
     }
 
