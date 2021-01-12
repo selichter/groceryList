@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:StorageProvider/StorageProvider.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:GroceryList.xcodeproj">
    </FileRef>
 </Workspace>
