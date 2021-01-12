@@ -24,6 +24,7 @@ struct AddItemView: View {
                             }
                 }
                 TextField("Amount", text: $itemData.amount)
+                    .keyboardType(.decimalPad)
                 TextField("Size", text: $itemData.size)
 
                 TextField("Notes", text: $itemData.notes)
