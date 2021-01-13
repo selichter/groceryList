@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		DFEC5B4325AE3522007E885F /* StorageProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEC5B3925AE3522007E885F /* StorageProvider.framework */; };
-		DFEC5B4825AE3522007E885F /* StorageProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC5B4725AE3522007E885F /* StorageProviderTests.swift */; };
+		DFEC5B4825AE3522007E885F /* StorageProviderGroceryListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC5B4725AE3522007E885F /* StorageProviderGroceryListTests.swift */; };
 		DFEC5B4A25AE3522007E885F /* StorageProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = DFEC5B3C25AE3522007E885F /* StorageProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFEC5B5A25AE3C94007E885F /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC5B5925AE3C94007E885F /* StorageProvider.swift */; };
+		DFEC5B5F25AE3E8B007E885F /* GroceryStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFEC5B5D25AE3E8B007E885F /* GroceryStorage.xcdatamodeld */; };
+		DFEC5B6725AF60D0007E885F /* StorageProvider+GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEC5B6625AF60D0007E885F /* StorageProvider+GroceryList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +30,11 @@
 		DFEC5B3C25AE3522007E885F /* StorageProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageProvider.h; sourceTree = "<group>"; };
 		DFEC5B3D25AE3522007E885F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFEC5B4225AE3522007E885F /* StorageProviderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StorageProviderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFEC5B4725AE3522007E885F /* StorageProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProviderTests.swift; sourceTree = "<group>"; };
+		DFEC5B4725AE3522007E885F /* StorageProviderGroceryListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProviderGroceryListTests.swift; sourceTree = "<group>"; };
 		DFEC5B4925AE3522007E885F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFEC5B5925AE3C94007E885F /* StorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
+		DFEC5B5E25AE3E8B007E885F /* GroceryStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroceryStorage.xcdatamodel; sourceTree = "<group>"; };
+		DFEC5B6625AF60D0007E885F /* StorageProvider+GroceryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageProvider+GroceryList.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				DFEC5B3C25AE3522007E885F /* StorageProvider.h */,
 				DFEC5B3D25AE3522007E885F /* Info.plist */,
+				DFEC5B5925AE3C94007E885F /* StorageProvider.swift */,
+				DFEC5B5D25AE3E8B007E885F /* GroceryStorage.xcdatamodeld */,
+				DFEC5B6625AF60D0007E885F /* StorageProvider+GroceryList.swift */,
 			);
 			path = StorageProvider;
 			sourceTree = "<group>";
@@ -80,7 +89,7 @@
 		DFEC5B4625AE3522007E885F /* StorageProviderTests */ = {
 			isa = PBXGroup;
 			children = (
-				DFEC5B4725AE3522007E885F /* StorageProviderTests.swift */,
+				DFEC5B4725AE3522007E885F /* StorageProviderGroceryListTests.swift */,
 				DFEC5B4925AE3522007E885F /* Info.plist */,
 			);
 			path = StorageProviderTests;
@@ -147,6 +156,7 @@
 				TargetAttributes = {
 					DFEC5B3825AE3522007E885F = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					DFEC5B4125AE3522007E885F = {
 						CreatedOnToolsVersion = 12.3;
@@ -194,6 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEC5B5A25AE3C94007E885F /* StorageProvider.swift in Sources */,
+				DFEC5B5F25AE3E8B007E885F /* GroceryStorage.xcdatamodeld in Sources */,
+				DFEC5B6725AF60D0007E885F /* StorageProvider+GroceryList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFEC5B4825AE3522007E885F /* StorageProviderTests.swift in Sources */,
+				DFEC5B4825AE3522007E885F /* StorageProviderGroceryListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		DFEC5B4E25AE3522007E885F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 84C29N4H5C;
@@ -357,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.slichter.StorageProvider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +380,7 @@
 		DFEC5B4F25AE3522007E885F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 84C29N4H5C;
@@ -389,6 +405,7 @@
 		DFEC5B5125AE3522007E885F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84C29N4H5C;
 				INFOPLIST_FILE = StorageProviderTests/Info.plist;
@@ -407,6 +424,7 @@
 		DFEC5B5225AE3522007E885F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84C29N4H5C;
 				INFOPLIST_FILE = StorageProviderTests/Info.plist;
@@ -453,6 +471,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DFEC5B5D25AE3E8B007E885F /* GroceryStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DFEC5B5E25AE3E8B007E885F /* GroceryStorage.xcdatamodel */,
+			);
+			currentVersion = DFEC5B5E25AE3E8B007E885F /* GroceryStorage.xcdatamodel */;
+			path = GroceryStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DFEC5B3025AE3522007E885F /* Project object */;
 }
